@@ -4,7 +4,6 @@ import java.util.Scanner;
 public class InputWithConditionsAndLoops {
 
     public static void main(String[] args) {
-
         Scanner scanner = new Scanner(System.in);
 
         int practiceDays = scanner.nextInt();
