@@ -1,41 +1,40 @@
 
 import java.util.Scanner;
 
-class FoodOrder {
+class MobilePlan {
 
-    String item;
-    int quantity;
+    String planName;
+    int price;
 
-    // Constructor 1: Default quantity is 1
-    FoodOrder(String item) {
-        this.item = item;
-        this.quantity = 1;
+    MobilePlan() {
+        this.planName = "Basic";
+        this.price = 199;
     }
 
-    // Constructor 2: User provides quantity
-    FoodOrder(String item, int quantity) {
-        this.item = item;
-        this.quantity = quantity;
+    MobilePlan(String planName, int price) {
+        this.planName = planName;
+        this.price = price;
     }
 
     void display() {
-        System.out.println("\n--- Food Order Details ---");
-        System.out.println("Food Item: " + item);
-        System.out.println("Quantity: " + quantity);
+        System.out.println("Plan: " + planName + ", Price: " + price);
     }
 }
 
 public class OverloadedConstructor {
 
     public static void main(String[] args) {
-
         Scanner scanner = new Scanner(System.in);
-        String item = scanner.nextLine();
-        int quantity = scanner.nextInt();
 
-        FoodOrder f1 = new FoodOrder(item);
-        FoodOrder f2 = new FoodOrder(item, quantity);
-        f1.display();
-        f2.display();
+        String planName = scanner.nextLine();
+        int price = scanner.nextInt();
+
+        MobilePlan m1 = new MobilePlan();
+        MobilePlan m2 = new MobilePlan(planName, price);
+
+        m1.display();
+        m2.display();
+
+        scanner.close();
     }
 }
