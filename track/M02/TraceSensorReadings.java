@@ -10,18 +10,12 @@ public class TraceSensorReadings {
 
         System.out.println("Reading count: " + readings.length);
 
-        System.out.println(
-                "Before correction: " + readings[correctionIndex]
-        );
+        System.out.println("Before correction: " + readings[correctionIndex]);
 
         readings[correctionIndex] += correction;
 
-        System.out.println(
-                "After correction: " + readings[correctionIndex]
-        );
+        System.out.println("After correction: " + readings[correctionIndex]);
 
-        System.out.println(
-                "Last valid index: " + (readings.length - 1)
-        );
+        System.out.println("Last valid index: " + (readings.length - 1));
     }
 }
